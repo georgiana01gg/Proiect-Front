@@ -9,8 +9,8 @@ function MessagesList(){
 
     useEffect(() =>{
         const fetchData = async () =>{
-            const result = await axios.get("http://localhost:8080/diary");
-            //const result = await axios.get(`${process.env.REACT_APP_API_URL}/diary`);
+            //const result = await axios.get("http://localhost:8080/diary");
+            const result = await axios.get(`${process.env.REACT_APP_API_URL}/diary`);
             
             if(result.data.message){
                 let messagesArray = result.data.message;

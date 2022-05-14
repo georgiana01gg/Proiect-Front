@@ -11,7 +11,7 @@ const handleDiarySent = async (e) => {
 
     try {
         const response = await axios.post(
-            `http://localhost:8080/diary`, 
+            `${process.env.REACT_APP_API_URL}/diary`, 
             {
                 writerName,
                 writerMail,
